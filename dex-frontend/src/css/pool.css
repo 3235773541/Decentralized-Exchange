@@ -1,0 +1,55 @@
+/* Pool CSS */
+
+.pool {
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  max-height: 500px;
+  font-size: 15px;
+  width: 90%;
+  overflow: auto;
+}
+
+/* Pool Table */
+
+.custom-table {
+  border-collapse: collapse;
+}
+
+.custom-table .btn{
+  background-color: var(--color-primary);
+  font-size: 15px;
+  color: var(--color-dark-grey);
+}
+
+.custom-table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+.custom-table-cell {
+  flex: 1;
+  padding: 10px;
+}
+
+.header-row {
+  font-weight: bold;
+}
+
+button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* Add Liquididty */
+/* Remove Liquididty */
+
+
+

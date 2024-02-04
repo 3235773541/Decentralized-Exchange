@@ -1,0 +1,197 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Satoshi-Medium";
+  src: url("../public/fonts/Satoshi-Medium.woff2") format("woff2"),
+    url("../public/fonts/Satoshi-Medium.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi-Black";
+  src: url("../public/fonts/Satoshi-Black.woff2") format("woff2"),
+    url("../public/fonts/Satoshi-Black.woff") format("woff");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+:root {
+  --color-primary: #e0f2fe;
+  --color-primary-dark: #0369a1;
+  --color-dark-grey: #374151;
+
+  --font-Satoshi-Black: "Satoshi-Black", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-satoshi-regular: "Satoshi-Medium", sans-serif;
+
+  /*  (black with 75% opacity for lightbox background) */
+}
+
+/* Scrollbar styles */
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-grey) var(--color-primary-dark);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--color-primary-dark);
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 20px;
+  /* border: 3px solid ; */
+}
+
+
+img {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-satoshi-regular);
+  text-align: center;
+}
+
+button {
+  font-family: var(--font-satoshi-regular);
+  font-size: 21px;
+  font-weight: bold;
+}
+
+select {
+  font-family: var(--font-satoshi-regular);
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+input {
+  border: none;
+  background: var(--color-primary);
+  outline: none;
+  font-size: 31px;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input {
+  -moz-appearance: textfield;
+}
+
+/* Utils */
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn--tokens {
+  background: white;
+  color: var(--color-primary-dark);
+  width: max-content;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 10px;
+  color: var(--color-primary-dark);
+}
+
+
+/* App */
+
+.app {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(5deg, white 0%, var(--color-primary) 86%);
+}
+
+/* Header */
+
+.header {
+  position: absolute;
+  top: 0;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Form Inputs */
+
+.input-area {
+  background: white;
+  border-radius: 21px;
+  padding: 5px;
+  position: relative;
+}
+
+.input-area__box {
+  background: var(--color-primary);
+  padding: 20px 15px;
+  border-radius: 10px;
+  margin-bottom: 2.5px;
+  display: flex;
+}
+
+.token-name{
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  height: 32px;
+  background: var(--color-primary-dark)
+}
+
+.amount-display{
+  padding: 5px;
+  margin: 5px;
+  font-size: 25px;
+}
+
+.info{
+  padding: 10px;
+  margin-top: 40px;
+}
+
+/* Loading Overlay */
+.app__overlay{
+  position: absolute;
+  background: rgba(0,0,0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
